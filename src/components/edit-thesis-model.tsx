@@ -1,4 +1,4 @@
-import { Thesis } from "@/pages";
+import { Thesis } from "@/types/types";
 import {
   Modal,
   ModalContent,

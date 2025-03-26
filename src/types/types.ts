@@ -4,9 +4,9 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
-export interface Thesis {
+export type Thesis = {
   key: string;
   title: string;
   url: string;
   year: number;
-}
+};

@@ -6,7 +6,9 @@ import { Input, Spacer } from "@heroui/react";
 import { SearchIcon } from "@/components/icons";
 import { Thesis } from "@/types/types";
 
-const findSearchText = (rootText: string, textSearch: string): number => {
+const findSearchText = (rootText: string, textSearch?: string): number => {
+  if (!textSearch) return 0;
+
   const from =
       "àáãảạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệđùúủũụưừứửữựòóỏõọôồốổỗộơờớởỡợìíỉĩịäëïîöüûñçýỳỹỵỷ",
     to =

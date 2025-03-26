@@ -33,7 +33,7 @@ export default function TableThesis({
   searchText,
   searchFunction,
 }: TableThesisProps) {
-  const [page, setPage] = useState<number>(thesisList.length ? 1 : 0);
+  const [page, setPage] = useState<number>(1);
 
   const rowsPerPage = 10;
 
@@ -50,8 +50,10 @@ export default function TableThesis({
   }, [thesisList]);
 
   useEffect(() => {
-    setPage(1);
-  }, [thesisList]);
+    if (searchText) {
+      setPage(1);
+    }
+  }, [searchText]);
 
   const {
     isOpen: isOpenEditModel,
